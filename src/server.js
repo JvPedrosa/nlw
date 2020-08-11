@@ -1,0 +1,114 @@
+// dados
+const proffys = [
+    {   name: "João Victor Pedrosa",
+        avatar: "https://avatars0.githubusercontent.com/u/60883241?s=460&u=8e164ae4dcb9bd36d76c948601174ebb0a4f90a9&v=4",
+        whatsapp: "83991339399",
+        bio: "Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>",
+        subject: "Química",
+        cost: "20",
+        weekday: [0],
+        time_from: [720],
+        time_to: [1220]
+    },
+    {   name: "Cesar Cielo",
+        avatar: "data:image/jpeg;base64,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",
+        whatsapp: "9894839489",
+        bio: "Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>",
+        subject: "Química",
+        cost: "20",
+        weekday: [1],
+        time_from: [720],
+        time_to: [1220]
+    },
+    {   name: "Neymar Jr",
+    avatar: "https://sportbuzz.uol.com.br/media/_versions/neymar_cabelo_widelg.jpg",
+    whatsapp: "9894839489",
+    bio: "Entusiasta das melhores tecnologias de química avançada.<br><br>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>",
+    subject: "Química",
+    cost: "20",
+    weekday: [1],
+    time_from: [720],
+    time_to: [1220]
+    }
+]
+
+const subjects = [
+    "Artes",
+    "Biologia",
+    "Ciências",
+    "Educação física",
+    "Física",
+    "Geografia",
+    "História",
+    "Matemática",
+    "Português",
+    "Química",
+]
+
+const weekdays = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+]
+
+// funcionalidades
+
+function getSubject(subjectNumber) {
+    const arrayPosition = +subjectNumber - 1
+    return subjects[arrayPosition]
+}
+
+function pageLanding(req, res){
+    return res.render("index.html")
+}
+
+function pageStudy(req, res){
+    const filters = req.query
+    return res.render("study.html", { proffys, filters, subjects, weekdays })
+}
+
+function pageGiveClasses(req, res){
+    const data = req.query
+
+    // se tiver dados
+    const isNotEmpty = Object.keys(data).length > 0
+    if(isNotEmpty){
+
+        data.subject = getSubject(data.subject)
+
+        // adicionar dados a lista de proffys
+        proffys.push(data)
+
+        return res.redirect("/study")
+    }
+
+    // se nao tiver dados, mostrar a página
+    return res.render("give-classes.html", {subjects, weekdays})
+}
+
+// servidor
+const express = require('express')
+const server = express()
+
+// configurar nunjucks (template engine)
+const nunjucks = require('nunjucks')
+nunjucks.configure('src/views', {
+    express: server,
+    noCache: true,
+})
+
+// inicio e configuração do servidor
+server
+// configurar arquivos estáticos (css, scripts, imagens)
+.use(express.static("public"))
+// rotas da aplicação
+.get("/", pageLanding)
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
+// star do servidor
+.listen(5500)
+ 
